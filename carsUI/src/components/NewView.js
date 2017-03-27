@@ -5,8 +5,7 @@ import React, { Component } from 'react'; //Import React and bring in class Comp
 import { ScrollView, View, Image, StyleSheet } from 'react-native'; // Need to Scroll a view
 import SectionHeader from './SectionHeader'; 
 import SectionText from './SectionText';
-import RatingBox from './RatingBox';
-import RoadTestScore from './RoadTestScore';
+
 //Create a component
 class NewView extends Component {
 	render() {
@@ -25,17 +24,7 @@ class NewView extends Component {
 				 <SectionText sectionText={'The electric-powered Model X is more showy than practical. It features rear doors that open up and out of the way, giving easy access to the rear seats. But these massive doors take their time to open and close.'} />
 
 				 <SectionHeader sectionheaderText={'Tested Cars'} />
-				 <RatingBox 
-				 	title={'Overall Score'}
-				 	score={'75'} 
-				 	name={'Tesla Model X'} 
-				 	engine={'Tech E6'} 
-				 />
-				 <RoadTestScore 
-				 	score={61}
-					min={60}
-					max={78}
-				 />
+                
 			</ScrollView>
 		);
 	}
