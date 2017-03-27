@@ -8,15 +8,15 @@ import { Text, View } from 'react-native';
 
 //Create a component
 const ScoreScale = (props) => {
-	const { scoreStyle, scaleViewStyle } = styles;
+	const { scoreStyle, rangeViewStyle, rangeStyle, viewStyle } = styles;
 
 	return (
-		<View>
+		<View style={viewStyle}>
 			<View>
-				<Text style={scoreStyle}>{props.score}</Text> 
+				<Text style={scoreStyle}>{props.score}</Text>
 			</View>
-			<View style={scaleViewStyle}>
-				<Text>{props.min}{props.max}</Text>
+			<View style={rangeViewStyle}>
+				<Text style={rangeStyle}>{props.min}{props.max}</Text>
 			</View>
 		</View>
 	);
@@ -24,11 +24,21 @@ const ScoreScale = (props) => {
 
 //Style the component
 const styles = {
-	scoreStyle: {
-		backgroundColor: 'yellow'
+	viewStyle: {
+		width: 200
 	},
-	scaleViewStyle: {
-		width: 150,
+	scoreStyle: {
+		backgroundColor: 'green',
+		color: 'white',
+		width: 25,
+		height: 25,
+		marginLeft: 75
+	},
+	rangeViewStyle: {
+		backgroundColor: '#f1f1f1'
+	},
+	rangeStyle: {
+		width: 55,
 		backgroundColor: 'gray'
 	}
 }
