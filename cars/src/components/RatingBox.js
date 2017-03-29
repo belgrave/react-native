@@ -4,7 +4,7 @@
 
 //Import Library to create a component
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 //Create a component
 const RatingBox = (props) => {
@@ -25,7 +25,7 @@ const RatingBox = (props) => {
 };
 
 //Style the component
-const styles = {
+const styles = StyleSheet.create({
 	testedStyle: {
 		marginTop: 10,
 		marginLeft: 10
@@ -48,7 +48,7 @@ const styles = {
 	scoreStyle: {
 		fontSize: 60
 	}
-}
+});
 
 //Make component availble to other parts of the app
 export default RatingBox;

@@ -4,7 +4,7 @@
 
 //Import Library to create a component
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 //Create a component
 const SectionHeader = (props) => {
@@ -18,7 +18,7 @@ const SectionHeader = (props) => {
 };
 
 //Style the component
-const styles = {
+const styles = StyleSheet.create({
 	viewStyle: {
 		backgroundColor: '#F8F8F8', //CSS camel case
 		height: 60,
@@ -31,7 +31,7 @@ const styles = {
 	textStyle: {
 		fontSize: 20
 	}
-}
+});
 
 //Make component availble to other parts of the app
 export default SectionHeader;

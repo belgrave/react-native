@@ -1,53 +1,25 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * Sample React Native App - Index.ios.js
+ * 1 component per file
+ * 
+ * expand component to fill entire content area of device. View style={{ flex: 1 }}
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+//Import Library to create a component
+import React from 'react';
+import { AppRegistry, View } from 'react-native';       //import npm modules
+import Header from './src/components/Header';     //import user created components
+import CarList from './src/components/CarList'; 
 
-export default class cars extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
+//Create a app
+const App = () => {
+  return (
+    <View style={{ flex: 1 }}>   
+      <Header headerText={'Tesla Model X'}/>
+      <CarList />
+    </View>
+  );
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('cars', () => cars);
+//Render component to device
+AppRegistry.registerComponent('cars', () => App);

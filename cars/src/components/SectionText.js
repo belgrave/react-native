@@ -4,7 +4,7 @@
 
 //Import Library to create a component
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 //Create a component
 const SectionText = (props) => {
@@ -18,7 +18,7 @@ const SectionText = (props) => {
 };
 
 //Style the component
-const styles = {
+const styles = StyleSheet.create({
 	viewStyle: {
 		paddingTop: 15,
 		paddingBottom: 15,
@@ -30,7 +30,7 @@ const styles = {
 	textStyle: {
 		fontSize: 14
 	}
-}
+});
 
 //Make component available to other parts of the app
 export default SectionText;

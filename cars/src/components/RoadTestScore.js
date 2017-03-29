@@ -4,7 +4,7 @@
 
 //Import Library to create a component
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import ScoreScale from './ScoreScale';
 
 //Create a component
@@ -28,7 +28,7 @@ const RoadTestScore = (props) => {
 };
 
 //Style the component
-const styles = {
+const styles = StyleSheet.create({
 	testedStyle: {
 
 	},
@@ -41,7 +41,7 @@ const styles = {
 		marginRight: 50,
 		fontSize: 12
 	}
-}
+});
 
 //Make component availble to other parts of the app
 export default RoadTestScore;

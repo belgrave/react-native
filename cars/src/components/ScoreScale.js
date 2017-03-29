@@ -4,7 +4,7 @@
 
 //Import Library to create a component
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 //Create a component
 const ScoreScale = (props) => {
@@ -23,7 +23,7 @@ const ScoreScale = (props) => {
 };
 
 //Style the component
-const styles = {
+const styles = StyleSheet.create({
 	viewStyle: {
 		width: 200
 	},
@@ -41,7 +41,7 @@ const styles = {
 		width: 55,
 		backgroundColor: 'gray'
 	}
-}
+});
 
 //Make component availble to other parts of the app
 export default ScoreScale;

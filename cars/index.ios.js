@@ -7,15 +7,17 @@
 
 //Import Library to create a component
 import React from 'react';
-import { AppRegistry, View } from 'react-native'; 	    //import npm modules
+import { AppRegistry, View, Navigator, TouchableHighlight } from 'react-native'; 	    //import npm modules
 import Header from './src/components/Header'; 		//import user created components
 import CarList from './src/components/CarList'; 
+import TopNav from './src/components/TopNav'; 
 
 //Create a app
 const App = () => {
 	return (
-		<View style={{ flex: 1 }}>   
+		<View style={{ flex: 1 }}> 
 		 	<Header headerText={'Tesla Model X'}/>
+		 	<TopNav /> 
 		 	<CarList />
 		</View>
 	);
